@@ -28,15 +28,7 @@ const selectTour = async () => {
   await delay(delayTimeMs);
 
   console.log('Click to pick the date');
-  const calendarClasses = [
-    ".CalendarDay",
-    ".CalendarDay_1",
-    ".CalendarDay__default",
-    ".CalendarDay__default_2",
-    ".CalendarDay__firstDayOfWeek",
-    ".CalendarDay__firstDayOfWeek_3"
-  ];
-  jQuery(calendarClasses.join("")).click();
+  jQuery('[aria-label="Monday, January 13, 2020, available"]').click()
   await delay(delayTimeMs);
 
   // Select number of guests
@@ -70,7 +62,8 @@ const intervalId = setInterval(async () => {
   const date = new Date();
   console.log(date);
   if (date.getHours() === 7) {
-  // if (date.getMinutes() === 37) {
+    // Use this for testing:
+    // if (date.getMinutes() === 37) {
     clearInterval(intervalId);
     await selectTour();
   }
