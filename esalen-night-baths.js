@@ -1,22 +1,23 @@
+// 1. The Esalen Hot Springs https://www.esalen.org/page/esalen-hot-springs
 // 1. Read the info https://nightbaths.esalen.org/
-// 2. Visit https://nightbaths.esalen.org/reservations/new
-// 3. Paste this in DevTools in the morning at 8:57am
+// 2. Go to https://nightbaths.esalen.org/reservations/new
+// 3. Paste this in DevTools Console in the morning at ~8:57am
 
 /*
-Drugs and alcohol are strictly forbidden in the Esalen baths.
-Please Arrive sober, We reserve the right to refuse entry upon check in.
+  Drugs and alcohol are strictly forbidden in the Esalen baths.
+  Please Arrive sober, We reserve the right to refuse entry upon check in.
 
-PLEASE BRING YOUR OWN TOWELS, NOT PROVIDED. GLASS IS NOT PERMITTED AT THE BATHS.
-A water fountain is provided, and please bring a non-glass water bottle.
+  PLEASE BRING YOUR OWN TOWELS, NOT PROVIDED. GLASS IS NOT PERMITTED AT THE BATHS.
+  A water fountain is provided, and please bring a non-glass water bottle.
 
-Please be considerate of others and support a wonderful experience for all, this is not intended to be a party environment.
+  Please be considerate of others and support a wonderful experience for all, this is not intended to be a party environment.
 
-Parking and Arrival Time
-Please Arrive by 12:45 am, PARK AND WAIT at the Esalen entrance on Highway 1 and DO NOT DRIVE DOWN THE HILL.
-Parking in the pull out next to the Esalen Institute sign, Head In parking only, Do not block the entrance.
+  Parking and Arrival Time
+  Please Arrive by 12:45 am, PARK AND WAIT at the Esalen entrance on Highway 1 and DO NOT DRIVE DOWN THE HILL.
+  Parking in the pull out next to the Esalen Institute sign, Head In parking only, Do not block the entrance.
 
-Arrival Time is 12:45am.
-At 12:45am Please wait by your car prepared to check in and embark . An Esalen Staff member will greet you and escort you to the baths.
+  Arrival Time is 12:45am.
+  At 12:45am Please wait by your car prepared to check in and embark . An Esalen Staff member will greet you and escort you to the baths.
  */
 
 const delay = async ms => new Promise(resolve => setTimeout(resolve, ms));
