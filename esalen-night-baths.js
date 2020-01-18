@@ -20,6 +20,23 @@
   At 12:45am Please wait by your car prepared to check in and embark . An Esalen Staff member will greet you and escort you to the baths.
  */
 
+/*
+ Part 1: Reload the page at 9:00am to get the Reserve button to appear
+ */
+
+ const reloadIntervalId = setInterval(async () => {
+  const date = new Date();
+  console.log(date);
+  if (date.getHours() === 9) {
+    clearInterval(reloadIntervalId);
+    location.reload();
+  }
+}, 200);
+
+/*
+ * Part 2: Make a reservation
+ * (Alternatively, run only the Part 2 and click Change to go back and select the date.)
+ */
 const delay = async ms => new Promise(resolve => setTimeout(resolve, ms));
 const delayTimeMs = 200;
 
