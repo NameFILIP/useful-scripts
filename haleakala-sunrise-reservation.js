@@ -9,7 +9,7 @@ const delayTimeMs = 200;
 
 const jQuery = window.$;
 
-const selectTour = async () => {
+const makeReservation = async () => {
 
   // Select tour
   console.log('Select tour');
@@ -65,7 +65,7 @@ const intervalId = setInterval(async () => {
     // Use this for testing:
     // if (date.getMinutes() === 37) {
     clearInterval(intervalId);
-    await selectTour();
+    await makeReservation();
   }
-}, 200)
+}, 200);
 
