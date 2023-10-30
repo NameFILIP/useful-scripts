@@ -37,10 +37,17 @@ function offsetGainsWithLosses(lots, sharesToSell) {
       totalGainOrLoss += losses[0].gainOrLoss;
       losses.shift();
     } else if (gains.length > 0) {
-      selectedLots.push(gains[0]);
-      sharesToSell -= gains[0].quantity;
-      totalGainOrLoss += gains[0].gainOrLoss;
-      gains.shift();
+      if (losses.length <= 0) {
+        selectedLots.push(gains[gains.length - 1]);
+        sharesToSell -= gains[gains.length - 1].quantity;
+        totalGainOrLoss += gains[gains.length - 1].gainOrLoss;
+        gains.pop();
+      } else {
+        selectedLots.push(gains[0]);
+        sharesToSell -= gains[0].quantity;
+        totalGainOrLoss += gains[0].gainOrLoss;
+        gains.shift();
+      }
     }
     totalGainOrLossArray.push(totalGainOrLoss);
     console.log({
@@ -75,4 +82,10 @@ const totalGainOrLoss = selectedLots.reduce((total, lot) => {
   return total + lot.gainOrLoss;
 }, 0);
 
-console.log(`Total Gain or Loss: ${totalGainOrLoss}`);
+const totalAmount = selectedLots.reduce((total, lot) => {
+  return total + lot.quantity * currentPrice;
+}, 0);
+
+console.log(
+  `Total Gain or Loss: ${totalGainOrLoss}, Total Amount: ${totalAmount}`
+);
